@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container{
+            display: flex;
+            width: 1000px;
+            height: 500px;
+            margin: 50px 350px;
+        }
+        
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 1000px;
+            height: 500px;
+        }
+
+        body {
+            background-color:lightyellow;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "blue";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+
+        function image_picker(){
+            let pilihan = document.getElementById("select").value; //pilihan.value
+            const list_image = ["bandar.jpg", "bangkok.jpeg", "hanoi.jpg", "jakarta.jpg", "kualalumpur.jpg", "manila.jpg", "naypyidaw.jpg", "phnom.jpg", "singapura.jpg", "vientiane.jpg"];
+            if(pilihan == "bangkok"){
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Bangkok, ibukota Thailand")
+            }
+            if(pilihan == "bandar"){
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Bandar Seri Begawan, ibukota Brunei Darussalam")
+            }
+            if(pilihan == "hanoi"){
+                let select = list_image[2];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Hanoi, ibukota Vietnam")
+            }
+            if(pilihan == "jakarta"){
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Jakarta, ibukota Indonesia")
+            }
+            if(pilihan == "kualalumpur"){
+                let select = list_image[4];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Kuala Lumpur, ibukota Malaysia")
+            }
+            if(pilihan == "manila"){
+                let select = list_image[5];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Manila, ibukota Filipina")
+            }
+            if(pilihan == "naypyidaw"){
+                let select = list_image[6];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Phnom Penh, ibukota kamboja")
+            }
+            if(pilihan == "phnom"){
+                let select = list_image[7];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota Hanoi, ibukota Vietnam")
+            }
+            if(pilihan == "singapura"){
+                let select = list_image[8];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di ibukota singapura")
+            }
+            if(pilihan == "vientiane"){
+                let select = list_image[9];
+                document.getElementById("image").src = `image/${select}`
+                alert("Selamat Datang di kota vientiane, ibukota Laos")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Southeast Asia Gallery</h1></a>
+    <hr>
+    <select name="" id="select" onchange="image_picker()">
+        <option value="">Pilih Kota</option>
+        <option value="bandar"> Bandar Seri Begawan-Brunei Darussalam </option>
+        <option value="bangkok"> Bangkok-Thailand </option>
+        <option value="hanoi"> Hanoi-Vietnam </option>
+        <option value="jakarta"> Jakarta-Indonesia </option>
+        <option value="kualalumpur"> Kuala Lumpur-Malaysia </option>
+        <option value="manila"> Manila-Filipina </option>
+        <option value="naypyidaw"> Naypyidaw-Myanmar </option>
+        <option value="phnom"> Phnom Penh-kamboja </option>
+        <option value="singapura"> Singapura </option>
+        <option value="vientiane"> Vientiane-Laos </option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
+
